@@ -25,6 +25,7 @@ class AlbumController {
     async get(req: Request, res: Response) {
 
         try {
+            
  
             let response: QueryResult = await pool.query('SELECT * FROM albums')
             return res.status(200).json(response.rows)
