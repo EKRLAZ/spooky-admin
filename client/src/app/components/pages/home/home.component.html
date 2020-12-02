@@ -1,0 +1,39 @@
+<div class="container">
+
+
+    <section>
+        <h2>Podcasts</h2>
+        <div class="grid-container" fxLayout="row wrap" fxLayoutAlign="start none" fxLayoutGap="15px grid">
+
+            <div fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="25" fxFlex.xs="50" *ngFor="let story of stories">
+
+                <div class="card" draggable="false">
+                    <mat-grid-list cols="1" rowHeight="1:1">
+
+                        <mat-grid-tile>
+                            <img draggable="false" class="img-go" src="{{ story.art_url }}">
+                        </mat-grid-tile>
+
+                    </mat-grid-list>
+
+                    <div class="content-text">
+                        <div class="title">
+                            <a draggable="false" href="">{{ story.title }}</a>
+                        </div>
+
+                        <div class="sunTitle">
+                            <a href="" *ngIf="story.publisher == ''" >{{story.subject_to}}</a>
+                            <a href="" *ngIf="story.publisher != ''" >{{story.publisher}}</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+</div>

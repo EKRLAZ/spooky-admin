@@ -1,0 +1,75 @@
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav [(mode)]="over"  [(opened)]="opened"   position="start">
+
+        <mat-nav-list>
+
+            <span *ngFor="let item of menu">
+                <span *ngIf="item.children && item.children.length > 0">
+                    <mat-accordion>
+                        <mat-expansion-panel class="bg-color">
+
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <!-- Cabeceras del submenu -->
+                                    <mat-icon svgIcon={{item.iconName}}></mat-icon>
+                                    <span class="submenu-text-sidenav">{{item.displayName}}</span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <span *ngFor="let child of item.children">
+                                <mat-list-item routerLink="{{child.route}}">
+
+                                    <mat-icon svgIcon={{child.iconName}}></mat-icon>
+                                    <span class="sub-sub-menu-text-sidenav">{{child.displayName}}</span>
+
+                                </mat-list-item>
+                            </span>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </span>
+                <span *ngIf="!item.children || item.children.length === 0">
+                    <mat-list-item routerLink="{{item.route}}">
+                        <!-- Entradas principales -->
+
+                        <mat-icon svgIcon={{item.iconName}}></mat-icon>
+
+                        <span class="menu-text-sidenav">{{item.displayName}}</span>
+
+                    </mat-list-item>
+                </span>
+            </span>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+
+    <mat-sidenav-content>
+
+
+        <mat-toolbar>
+
+            <mat-toolbar-row>
+                <span>Third Line</span>
+                <span class="example-spacer"></span>
+
+                <button mat-icon-button routerLink="upload/">
+                    <mat-icon svgIcon="upl"></mat-icon>
+                </button>
+
+            </mat-toolbar-row>
+
+        </mat-toolbar>
+
+
+
+        <router-outlet></router-outlet>
+
+
+
+
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>

@@ -1,0 +1,148 @@
+
+.container {
+    margin: 5%;
+}
+
+.section-left {
+    .form-container {
+        .form-base > * {
+            width: 100%;
+        }
+    }
+
+    .social-inputs {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+
+        .mat-form-field {
+            font-size: 12px;
+            vertical-align: middle;
+
+            .mat-input-element {
+                line-height: 0px !important;
+                vertical-align: middle;
+            }
+
+            .mat-icon {
+                padding-right: 10px;
+                height: 22px;
+                width: 22px;
+                vertical-align: middle;
+            }
+        }
+
+        ::ng-deep .mat-form-field-wrapper {
+            margin: 0 !important;
+            padding: 0;
+        }
+
+        .item-web {
+            width: 100%;
+            grid-area: 3 / 1 / span 1 / span 2;
+        }
+    }
+
+    .button-container {
+        text-align: center;
+        margin: 45px auto;
+    }
+}
+
+.section-right {
+    .container-right {
+        margin: 0% 15%;
+
+        .img-container > * {
+            width: 100%;
+             
+        }
+
+        .img-pm {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .container-alert {
+        margin: 10% 5%;
+
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+
+        .alert {
+            padding: 12px;
+        }
+
+        .alert-txt {
+            color: #155724;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .alert-button {
+            text-align: center;
+            mat-icon {
+                color: #134e21 !important;
+            }
+        }
+    }
+
+    .progress-container {
+        margin: 10% 5%;
+    }
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: #69f0ae;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #303030;
+}
+
+::ng-deep .mat-progress-bar {
+    height: 5px !important;
+    border-radius: 15px;
+}
+
+mat-button-toggle-group {
+    box-shadow: none;
+    margin-top: 25px;
+}
+
+mat-button-toggle {
+    border: 1px rgba(0, 0, 0, 0) solid !important;
+}
+
+.mat-button-toggle-checked {
+    background-color: rgb(98, 255, 216) !important;
+    color: black;
+    font-weight: 800px;
+}
+
+.mat-button-toggle-input {
+    background-color: none !important;
+}
+
+.frm-group {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+    margin-top: 10px;
+}
+
+.frm-group-2 {
+    display: grid;
+    grid-template-columns: 68% 28%;
+    grid-column-gap: 4%;
+    margin-top: 10px;
+    input {
+        font-size: 16px;
+    }
+}

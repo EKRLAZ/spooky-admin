@@ -1,0 +1,49 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata2016">image/svg+xml</metadata>
+ <defs>
+  <filter color-interpolation-filters="sRGB" id="filter2039"/>
+  <filter color-interpolation-filters="sRGB" id="filter2045"/>
+  <filter color-interpolation-filters="sRGB" id="filter2051"/>
+  <filter color-interpolation-filters="sRGB" id="filter2057"/>
+  <filter color-interpolation-filters="sRGB" id="filter2063"/>
+  <filter color-interpolation-filters="sRGB" id="filter2069"/>
+  <filter color-interpolation-filters="sRGB" id="filter2075"/>
+  <filter color-interpolation-filters="sRGB" id="filter2081"/>
+  <filter color-interpolation-filters="sRGB" id="filter2087"/>
+  <filter color-interpolation-filters="sRGB" id="filter2093"/>
+  <filter color-interpolation-filters="sRGB" id="filter2099"/>
+  <filter color-interpolation-filters="sRGB" id="filter2105"/>
+  <filter color-interpolation-filters="sRGB" id="filter2111"/>
+  <filter color-interpolation-filters="sRGB" id="filter2117"/>
+  <filter color-interpolation-filters="sRGB" id="filter2123"/>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#202020" id="canvas_background" height="514" width="514" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g filter="url(#filter2123)" id="g1981"/>
+  <g filter="url(#filter2117)" id="g1983"/>
+  <g filter="url(#filter2111)" id="g1985"/>
+  <g filter="url(#filter2105)" id="g1987"/>
+  <g filter="url(#filter2099)" id="g1989"/>
+  <g filter="url(#filter2093)" id="g1991"/>
+  <g filter="url(#filter2087)" id="g1993"/>
+  <g filter="url(#filter2081)" id="g1995"/>
+  <g filter="url(#filter2075)" id="g1997"/>
+  <g filter="url(#filter2069)" id="g1999"/>
+  <g filter="url(#filter2063)" id="g2001"/>
+  <g filter="url(#filter2057)" id="g2003"/>
+  <g filter="url(#filter2051)" id="g2005"/>
+  <g filter="url(#filter2045)" id="g2007"/>
+  <g filter="url(#filter2039)" id="g2009"/>
+  <g stroke="null" id="svg_1">
+   <path stroke="#ffffff" fill="none" fill-opacity="0.00233" stroke-width="13.4983" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="9.8" d="m201.96042,315.78836c-41.33246,-24.44221 -53.12038,-83.96236 -28.35724,-124.13068c7.06884,-11.92408 17.00293,-22.23829 29.03125,-29.20388" id="path2159"/>
+   <path stroke="#ffffff" fill="#000000" fill-opacity="0" stroke-width="12.5835" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="9.8" d="m170.29127,352.58913c-46.93091,-31.01666 -64.99653,-93.52985 -52.99598,-146.87836c7.08489,-32.49852 25.437,-63.46424 53.92062,-81.50294" id="path2159-3"/>
+   <path stroke="#ffffff" fill="none" fill-opacity="0.00233" stroke-width="13.4983" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="9.8" d="m310.03958,315.6431c41.33246,-24.44221 53.12038,-83.96236 28.35723,-124.13068c-7.06884,-11.92408 -17.00293,-22.23828 -29.03125,-29.20388" id="path2159-5"/>
+   <path stroke="#ffffff" fill="#000000" fill-opacity="0" stroke-width="12.5835" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="9.8" d="m341.70872,352.44387c46.93091,-31.01666 64.99654,-93.52985 52.99598,-146.87836c-7.08489,-32.49852 -25.437,-63.46424 -53.92062,-81.50295" id="path2159-3-3"/>
+   <path stroke="#ffffff" fill="none" stroke-width="13.8" stroke-miterlimit="4" d="m256.71329,277.50769c0,36.80991 0,73.61982 0,110.42973c0,-36.80991 0,-73.61982 0,-110.42973zm35.1171,-38.91216c0.96756,23.65734 -25.75584,42.60352 -47.76045,33.64972c-21.12878,-7.02236 -30.95767,-35.30518 -17.57195,-53.45283c11.45107,-18.47399 40.05584,-21.43123 54.83476,-5.39333c6.6243,6.58252 10.71021,15.79971 10.49764,25.19644z" id="path2787"/>
+  </g>
+ </g>
+</svg>

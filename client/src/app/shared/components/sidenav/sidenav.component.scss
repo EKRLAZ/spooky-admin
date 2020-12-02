@@ -1,0 +1,87 @@
+mat-sidenav {
+    width: 232px;
+    padding: 15px;
+    border-width: 0em;
+}
+.mat-drawer {
+    background-color: #000000;
+    color: #fff;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.acordeon-well {
+    margin: 0px !important;
+    padding: 0px !important; 
+}
+
+.bg-color {
+    background: #00000000 !important;
+}
+
+.menu-text-sidenav {
+
+    width: 70%;
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-transform: none;
+    align-self: center;
+}
+
+.submenu-text-sidenav {
+    width: 70%;
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    text-transform: none;
+    align-self: center;
+    
+}
+
+.sub-sub-menu-text-sidenav {
+    width: 70%;
+    margin-left: 10%;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    text-transform: none;
+    text-align: start;
+    
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+
+
+.full-width {
+    width: 100%;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+
+.submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+}
+.submenu.expanded {
+    transform: scaleY(1);
+}

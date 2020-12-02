@@ -1,0 +1,147 @@
+<div class="container">
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="5% grid">
+
+        <div class="section-left" fxFlex="60" fxFlex.xs="55">
+    
+            <div class="form-container">
+    
+                <form class="form-base" [formGroup]="form" (ngSubmit)="saveStory(form.value, formDirective)"
+                    #formDirective="ngForm">
+    
+                    <mat-form-field appearance="outline">
+    
+                        <mat-label>Name</mat-label>
+                        <input matInput autocomplete="off" formControlName="name">
+                        <mat-hint>Name</mat-hint>
+    
+                    </mat-form-field>
+    
+    
+                    <mat-form-field appearance="outline">
+    
+                        <mat-label>Description</mat-label>
+                        <textarea matInput rows="8" autocomplete="off" formControlName="description"></textarea>
+                        <mat-hint>Description</mat-hint>
+    
+                    </mat-form-field>
+    
+    
+                    <mat-form-field appearance="outline">
+    
+                        <mat-label>Image</mat-label>
+                        <input formControlName="img_url" matInput placeholder="https://i.imgur.com/3kof9f9.jpg"
+                            (change)="imageChange($event.target.value)" autocomplete="off">
+                        <mat-hint>Image [ JPG - PNG ]</mat-hint>
+    
+                    </mat-form-field>
+    
+    
+    
+    
+                    <div class="social-inputs">
+    
+    
+                        <mat-form-field appearance="outline">
+    
+                            <mat-label>Facebook</mat-label>
+                            <input (change)="extractFacebookId($event.target.value)" matInput placeholder="Facebook"
+                                autocomplete="off" formControlName="facebook">
+                            <mat-icon matPrefix svgIcon="facebook_brand"> </mat-icon>
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline">
+    
+                            <mat-label>Instagram</mat-label>
+                            <input (change)="extractInsgramUserName($event.target.value)" matInput placeholder="Instagram"
+                                autocomplete="off" formControlName="instagram">
+                            <mat-icon matPrefix svgIcon="instagram_brand"> </mat-icon>
+    
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline">
+    
+                            <mat-label>Youtube</mat-label>
+                            <input (change)="extractYoutubeId($event.target.value)" matInput placeholder="Youtube"
+                                autocomplete="off" formControlName="youtube">
+                            <mat-icon matPrefix svgIcon="youtube_brand"></mat-icon>
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline">
+    
+                            <mat-label>Twitter</mat-label>
+                            <input (change)="extractTwitterUserName($event.target.value)" matInput placeholder="twitter"
+                                autocomplete="off" formControlName="twitter">
+                            <mat-icon matPrefix svgIcon="twitter_brand"></mat-icon>
+    
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline" class="item-web">
+                            <mat-label>Any other website</mat-label>
+                            <input matInput placeholder="Any other website" autocomplete="off" formControlName="web">
+                            <mat-icon matPrefix svgIcon="web_brand"> </mat-icon>
+                        </mat-form-field>
+    
+                    </div>
+    
+    
+                    <!--                 <mat-button-toggle-group #group="matButtonToggleGroup" (change)="onValChange(group.value)">
+                    <mat-button-toggle value="explicit">Explicit</mat-button-toggle>
+                    <mat-button-toggle value="clean">Clean</mat-button-toggle>
+                  </mat-button-toggle-group> -->
+    
+    
+    
+    
+                    <div class="button-container">
+                        <button mat-flat-button color="accent">Publish</button>
+                    </div>
+    
+    
+    
+                </form>
+    
+            </div>
+    
+    
+        </div>
+    
+        <div class="section-right" fxFlex="40" fxFlex.xs="45">
+    
+            <div class="container-right">
+    
+                <div class="img-container">
+                    <img src="{{ imgUrl }}">
+                </div>
+    
+    
+            </div>
+    
+            <div class="container-alert" *ngIf="showAlert" @fadeIn @fadeOut (click)="closeAlert()" >
+                <div class="alert alert-txt" fxFlex.xl="90" fxFlex.lg="88"  fxFlex.md="80" fxFlex.sm="80" fxFlex.xs="85"  >
+                    <strong>Podcaster Saved Successfully</strong> Check it..
+                </div>
+    
+    
+                <div  class="alert-button" fxFlex.xl="10"  fxFlex.lg="12" fxFlex.md="20" fxFlex.sm="20" fxFlex.xs="15" >
+    
+                    <div class="btn-content">
+                        <button mat-icon-button>
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="progress-container" >
+                <mat-progress-bar *ngIf="show" @fadeIn @fadeOut mode="indeterminate"></mat-progress-bar>
+    
+            </div>
+    
+    
+        </div>
+    
+    
+    </div>
+</div>

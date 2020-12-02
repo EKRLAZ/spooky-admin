@@ -1,0 +1,189 @@
+<div class="upload-button-container" [hidden]="!isHidden">
+
+    <button (click)="openInput()" class="circle" mat-icon-button color="primary"
+        aria-label="Example icon button with a home icon">
+        <mat-icon color="primary" svgIcon="upload"></mat-icon>
+    </button>
+
+    <div class="upload-text-container">
+        <h2 class="msg">Seleciona la historia para subirla</h2>
+        <span class="msg-2">Tu historia será privada hasta que la publiques</span>
+    </div>
+    <input type="file" id="fileInput" class="file-input" (change)="fileChange($event.target.files)">
+
+</div>
+
+
+<div class="container">
+
+
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="5% grid">
+
+        <div class="section-left" fxFlex="60" fxFlex.xs="55">
+
+            <div class="form-container" [hidden]="isHidden">
+
+                <form [formGroup]="form" (ngSubmit)="saveTale(form.value, formDirective)" #formDirective="ngForm"
+                    enctype="multipart/form-data">
+
+                    <div class="form-base">
+
+                        <mat-form-field appearance="outline">
+
+                            <mat-label>Title</mat-label>
+                            <input matInput placeholder="Title" autocomplete="off" formControlName="title">
+                            <mat-hint>Hint</mat-hint>
+
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+
+                            <mat-label>Description</mat-label>
+                            <textarea matInput rows="8" autocomplete="off" formControlName="description"></textarea>
+                            <mat-hint>Description</mat-hint>
+
+                        </mat-form-field>
+
+                        <div class="frm-group-2">
+
+                            <mat-form-field appearance="outline">
+
+                                <mat-label>Media Type</mat-label>
+                                <mat-select formControlName="type" (selectionChange)="typeChange($event.value)">
+
+                                    <mat-option disabled>Choose</mat-option>
+                                    <mat-option *ngFor="let type of mediaTypes" [value]="type.value">
+                                        {{type.name}}
+                                    </mat-option>
+
+
+                                </mat-select>
+                                <mat-hint>Media Type</mat-hint>
+
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Duration</mat-label>
+                                <input matInput placeholder="00:00:00" readonly formControlName="duration">
+                                <mat-hint>Hint</mat-hint>
+                            </mat-form-field>
+
+
+
+                        </div>
+
+
+                        <div class="frm-group">
+
+                            <mat-form-field appearance="outline">
+
+                                <mat-label>Publisher</mat-label>
+
+                                <mat-select formControlName="publisher"
+                                    (selectionChange)="publisherChange($event.value)">
+
+                                    <mat-option disabled>Choose</mat-option>
+                                    <mat-option *ngFor="let publisher of publishers" [value]="publisher.name">
+                                        {{publisher.name}}
+                                    </mat-option>
+                                </mat-select>
+
+                                <mat-hint>Publisher</mat-hint>
+
+
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+
+                                <mat-label>Category</mat-label>
+                                <mat-select formControlName="subject_to" (selectionChange)="catChange($event.value)">
+                                    <mat-option disabled>Choose</mat-option>
+                                    <mat-option *ngFor="let subject of subjects" [value]="subject.name">{{subject.name}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-hint>Category</mat-hint>
+
+
+                            </mat-form-field>
+
+
+
+
+                        </div>
+
+                        <mat-form-field appearance="outline">
+
+                            <mat-label>Image Source</mat-label>
+                            <input formControlName="art_url" matInput placeholder="https://i.imgur.com/3kof9f9.jpg"
+                                (change)="imgageChange($event.target.value)" autocomplete="off">
+                            <mat-hint>Image Source [ JPG - PNG ]</mat-hint>
+            
+                        </mat-form-field>
+            
+
+                    </div>
+
+
+                                             
+            
+                    <mat-button-toggle-group formControlName="explicit" #group="matButtonToggleGroup" (change)="onValChange(group.value)">
+                        <mat-button-toggle value="explicit">Explicit</mat-button-toggle>
+                        <mat-button-toggle value="clean">Clean</mat-button-toggle>
+                    </mat-button-toggle-group>
+        
+        
+        
+                    <div class="button-container">
+                        <button mat-flat-button color="accent">Publish</button>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <div class="section-right" fxFlex="40" fxFlex.xs="45" >
+
+            <div class="container-right" [hidden]="isHidden">
+
+                <div class="img-container">
+                    <img src="{{ imgUrl }}" class="img-pm">
+                </div>
+
+
+            </div>
+
+            <div class="container-alert" *ngIf="showAlert" @fadeIn @fadeOut (click)="closeAlert()">
+                <div class="alert alert-txt" fxFlex.xl="90" fxFlex.lg="88" fxFlex.md="80" fxFlex.sm="80" fxFlex.xs="85">
+                    <strong>Podcaster Saved Successfully</strong> Check it..
+                </div>
+
+
+                <div class="alert-button" fxFlex.xl="10" fxFlex.lg="12" fxFlex.md="20" fxFlex.sm="20" fxFlex.xs="15">
+
+                    <div class="btn-content">
+                        <button mat-icon-button>
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="progress-container">
+                <mat-progress-bar *ngIf="show" @fadeIn @fadeOut mode="determinate" [value]="progressbarValue"></mat-progress-bar>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
