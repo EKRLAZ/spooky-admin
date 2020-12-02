@@ -37,7 +37,8 @@ This is just an outdated sample as the actual app cannot be displayed due to sen
  *
  * Unauthorized copying of this file by any means is strictly prohibited.
  * This is proper and confidential.
- * You should not extract parts of the code is not allowed by the Terms of Use or the Licenses for this application.
+ * You should not extract parts of the code is not allowed by the
+ * Terms of Use or the Licenses for this application.
  *
  * Made with ❤️️ by Erick Alvarez (... with a lot of caffeine, and patience)
  * Contact.
